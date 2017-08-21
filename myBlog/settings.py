@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'myBlog.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
         'USER': 'root',
@@ -85,7 +85,6 @@ DATABASES = {
         "HOST": "localhost",
     },
 }
-
 
 
 # Password validation
@@ -128,6 +127,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "blog/static"),)
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
 

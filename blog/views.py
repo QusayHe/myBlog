@@ -10,8 +10,6 @@ def index(request):
     tags = Tag.objects.all()
     new_articles = Article.objects.order_by('-created_time').all()[:5]
 
-
-
     return render(request, 'blog/index.html', context={
                                                         'newArticles': new_articles,
                                                         'tags': tags,
