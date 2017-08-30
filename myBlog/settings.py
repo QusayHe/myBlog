@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'hq0327',
         "HOST": "localhost",
     },
 }
@@ -125,7 +127,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "blog/static"),)
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MEDIA_URL = '/media/'
 
+CKEDITOR_UPLOAD_PATH = 'upload/'
+
+CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'
